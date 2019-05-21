@@ -1,5 +1,6 @@
 import React from 'react';
 import './Banner.scss';
+import { FaGithub , FaLinkedin, FaFilePdf} from "react-icons/fa";
 
 class Banner extends React.Component{
   render(){
@@ -14,19 +15,25 @@ class Banner extends React.Component{
         <div id='midBanner'className='row bg-dark m-0 p-0 align-items-center'>
           <div className='col'>
           <div>
-            <h1 title='Name' id="bannerName" className='text-white mx-auto' data-text='Hayden Yap'>Hayden Yap</h1>
+            <h1 title='Name' id="bannerName" className='text-white mx-auto glitchClass' data-text='Hayden Yap'>Hayden Yap</h1>
           </div>
 
-            <div id='linkContainer' className='row d-block text-white mx-auto'>
+            <div id='linkContainer' className='row mx-auto d-sm-block'>
               <ul title='list of personal links' id='links'>
-                <li className='col-2 d-inline-block mx-auto'>
-                  Link1
+                <li className='col-md-2 col-xs-12 d-inline-block mx-auto p-0'>
+                  <span className='btn btn-dark d-block bannerLink glitchClass'>
+                    <FaGithub className='pb-1'/> <span className='glitchClass' data-text='GitHub'>GitHub</span>
+                  </span>
                 </li>
-                <li className='col-2 d-inline-block mx-auto'>
-                  Link2
+                <li className='col-md-2 col-xs-12 d-inline-block mx-auto p-0'>
+                <span className='btn btn-dark d-block bannerLink glitchClass'>
+                    <FaLinkedin className='pb-1'/> <span className='glitchClass' data-text='LinkedIn'>LinkedIn</span>
+                  </span> 
                 </li>
-                <li className='col-2 d-inline-block mx-auto'>
-                  Link3
+                <li className='col-md-2 col-xs-12 d-inline-block mx-auto p-0'>
+                <span className='btn btn-dark d-block bannerLink glitchClass'>
+                    <FaFilePdf className='pb-1'/> <span className='glitchClass' data-text='Resume'>Resume</span>
+                  </span>
                 </li>
               </ul>
             </div>

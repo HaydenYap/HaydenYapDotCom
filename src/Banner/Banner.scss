@@ -29,17 +29,27 @@
             border-radius: 0% 0% 90% 0%;
         }
     }
+    .bannerLink{
+        font-size: 1em;
+        max-width: 50vw;
+    }
 }
 
 #bannerName{
     max-width: 50vw;
-    font-size: 5em;
+    font-size: 4em;
     font-family: 'Courier New', Courier, monospace;
-    animation-name: swing;
-    animation-duration: 3s;
-    animation-timing-function: ease;
-    animation-iteration-count: infinite;
-    animation-direction: alternate;
+    @media screen {
+        animation-name: swing;
+        animation-duration: 3s;
+        animation-timing-function: ease;
+        animation-iteration-count: infinite;
+        animation-direction: alternate;
+    }
+
+}
+
+.glitchClass{
     position: relative;
     &::before, &::after{
         content: attr(data-text);
@@ -79,7 +89,7 @@
     @for $i from 0 through $timeFrames {
       #{percentage($i*(1/$timeFrames))} {
         $bottom: random(100);
-        clip: rect(random(100-$bottom)+vh, 100vw, $bottom+vh, 0);
+        clip: rect(random(100-$bottom + 1)+vh, 100vw, $bottom+vh, 0);
       }
     }
   }
