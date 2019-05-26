@@ -1,6 +1,6 @@
 import Section from '../Section/Section';
 import React from 'react'
-import './Contact.scss';
+import './About.scss';
 
 class About extends Section{
     constructor(props){
