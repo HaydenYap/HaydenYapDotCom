@@ -1,0 +1,9 @@
+#Hero{
+    & .topSection{
+        background-image: linear-gradient(to bottom left,#61dafb 10%, #343a40 90%);
+    }
+
+    & .bottomSection{
+        background-image: linear-gradient(to top right,#61dafb 10%, #343a40 90%);
+    }
+}

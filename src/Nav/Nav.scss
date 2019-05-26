@@ -1,0 +1,26 @@
+@import '../glitch.scss';
+
+$breakpoint-tablet: 768px;
+
+.navbar{
+    position: fixed;
+    top: 0;
+    height: 5vh;
+    width: 100%;
+    background:linear-gradient(to bottom, #343a40, rgba(#343a40,0)) !important;
+}
+
+.link{
+    text-decoration: none;
+    
+    &:hover{
+        text-decoration: inherit;
+        color: inherit;
+        opacity: 0.5;
+    }
+
+    &:visited{
+        text-decoration: inherit;
+        color: inherit;
+    }
+}

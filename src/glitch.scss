@@ -1,0 +1,44 @@
+.glitchClass{
+    position: relative;
+    &::before, &::after{
+        content: attr(data-text);
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+
+    &::before{
+        left:2px;
+        text-shadow: -1px 0 red;
+        animation-name: glitch;
+        animation-timing-function: linear;
+        animation-duration: 1s;
+        animation-iteration-count: infinite;
+        animation-direction: alternate;
+        animation-delay: 0.5s;
+    }
+
+    &::after{
+        left: -2px;
+        text-shadow: -1px 0 blue;
+        clip: rect(29px, 450px, 16px, 0);
+        animation-name: glitch;
+        animation-timing-function: linear;
+        animation-duration: 1s;
+        animation-iteration-count: infinite;
+        animation-direction: alternate-reverse;
+    }
+}
+
+  @keyframes glitch {
+    $timeFrames: 20;
+    
+    @for $i from 0 through $timeFrames {
+      #{percentage($i*(1/$timeFrames))} {
+        $bottom: random(100);
+        clip: rect(random(100-$bottom + 1)+vh, 100vw, $bottom+vh, 0);
+      }
+    }
+  }

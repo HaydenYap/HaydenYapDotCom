@@ -1,13 +1,18 @@
 import React from 'react';
-import Banner from './Banner/Banner'
+import Hero from './Content/Hero';
+import Contact from './Content/Contact';
+import Nav from './Nav/Nav';
 import './App.scss';
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-      <Banner />
+      <Nav />
+      <Hero />
       </header>
+      <div className='divider'></div>
+      <Contact />
     </div>
   );
 }

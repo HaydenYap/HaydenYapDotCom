@@ -1,0 +1,69 @@
+@import 'node_modules/bootstrap/scss/bootstrap';
+@import '../glitch.scss';
+
+$breakpoint-tablet: 768px;
+
+.section{
+    font-family: 'Courier New', Courier, monospace;
+    height:100vh;
+
+    .sectionSpace{
+        height: 5vh;
+        background-color:transparent;
+    }
+
+    .topSection{
+        
+        height: 20vh;
+        .topRound{
+            height: 15vh;
+            border-radius: 90% 0% 0% 0%;
+        }
+    }
+    
+    .midSection{
+        height: 60vh;
+    }
+
+    .bottomSection{
+        height: 20vh;
+        .bottomRound{
+            height: 15vh;
+            border-radius: 0% 0% 90% 0%;
+        }
+    }
+    .sectionLink{
+        font-size: 1em;
+        max-width: 50vw;
+    }
+}
+
+.sectionTitle{
+    font-size: 2em;
+
+    @media (min-width: $breakpoint-tablet) {
+        font-size: 4em;
+        animation-name: swing;
+        animation-duration: 3s;
+        animation-timing-function: ease;
+    }
+
+}
+
+@keyframes swing {
+    0% { transform: skewX(70deg); }
+    0% { transform: skewX(-70deg); }
+    2% { transform: skewX(60deg); }
+    4% { transform: skewX(30deg); }
+    6% { transform: skewX(0deg); }
+    8% { transform: skewX(-15deg); }
+    10% { transform: skewX(15deg); }
+    12% { transform: skewX(-15deg); }
+    14% { transform: skewX(0deg); }
+  }
+
+
+
+
+
+
