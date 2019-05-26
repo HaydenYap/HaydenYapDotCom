@@ -1,0 +1,30 @@
+@import '../../typing.scss';
+
+$breakpoint-tablet: 768px;
+
+#display{
+    border: 0.15em solid rgb(41, 41, 41);
+    justify-items: start;
+    border-radius: 0.2em;
+    min-width: 60vw;
+    background: black;
+    span, h2{
+        line-height: 1em;
+       @media (max-width: $breakpoint-tablet) {
+        font-size: 1em; 
+        line-height: 1em;
+     }
+    }
+}
+
+#command{
+
+    display: flex;
+    text-justify: left;
+}
+
+.commandType{
+    animation: 
+        showText 2s steps(40,end) forwards,
+        flashingCursor 0.5s step-end 4
+}
